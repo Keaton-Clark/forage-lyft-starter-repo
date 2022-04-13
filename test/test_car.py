@@ -17,13 +17,15 @@ def test_calliope():
     last_service_date = add_years_to_date(current_date, -1)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100
+    tire_wear = [0, 0, 0, 0]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
     print("----------------------------------------------")
@@ -32,13 +34,15 @@ def test_calliope():
     last_service_date = add_years_to_date(current_date, -10)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100000
+    tire_wear = [.9, .7, 1, .5]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
 def test_glissade():
@@ -48,13 +52,15 @@ def test_glissade():
     last_service_date = add_years_to_date(current_date, -1)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100
+    tire_wear = [0, 0, 0, 0]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
     print("----------------------------------------------")
@@ -63,13 +69,15 @@ def test_glissade():
     last_service_date = add_years_to_date(current_date, -10)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100000
+    tire_wear = [.9, .7, 1, .5]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_glissade(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
 def test_palindrome():
@@ -78,12 +86,14 @@ def test_palindrome():
     current_date = datetime.now()
     last_service_date = add_years_to_date(current_date, -1)
     warning_light_is_on = False
+    tire_wear = [0, 0, 0, 0]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast servcice date:\t", last_service_date,
-            "\nWarning light is on:\t", warning_light_is_on)
+            "\nWarning light is on:\t", warning_light_is_on,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_palindrome(current_date, last_service_date, warning_light_is_on)
+    car = CarFactory.create_palindrome(current_date, last_service_date, warning_light_is_on, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
     print("----------------------------------------------")
@@ -91,12 +101,14 @@ def test_palindrome():
     current_date = datetime.now()
     last_service_date = add_years_to_date(current_date, -10)
     warning_light_is_on = True
+    tire_wear = [.9, .7, 1, .5]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast servcice date:\t", last_service_date,
-            "\nWarning light is on:\t", warning_light_is_on)
+            "\nWarning light is on:\t", warning_light_is_on,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_palindrome(current_date, last_service_date, warning_light_is_on)
+    car = CarFactory.create_palindrome(current_date, last_service_date, warning_light_is_on, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
 def test_rorschach():
@@ -106,13 +118,15 @@ def test_rorschach():
     last_service_date = add_years_to_date(current_date, -1)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100
+    tire_wear = [0, 0, 0, 0]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
     print("----------------------------------------------")
@@ -121,13 +135,15 @@ def test_rorschach():
     last_service_date = add_years_to_date(current_date, -10)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100000
+    tire_wear = [.9, .7, 1, .5]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage, 
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
 def test_thovex():
@@ -137,13 +153,15 @@ def test_thovex():
     last_service_date = add_years_to_date(current_date, -1)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 100
+    tire_wear = [0, 0, 0, 0]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\ncurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
 
     print("----------------------------------------------")
@@ -152,11 +170,13 @@ def test_thovex():
     last_service_date = add_years_to_date(current_date, -10)
     current_mileage = rand(100000, 1000000)
     last_service_mileage = current_mileage - 50000
+    tire_wear = [.9, .7, 1, .5]
 
     print("Creating with values:\nCurrent date:\t\t", current_date,
             "\nLast service date:\t", last_service_date,
             "\nCurrent mileage:\t", current_mileage,
-            "\nLast service mileage:\t", last_service_mileage)
+            "\nLast service mileage:\t", last_service_mileage,
+            "\nCurrent tire wear:\t", tire_wear)
 
-    car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
+    car = CarFactory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage, tire_wear)
     print("Needs service:\t\t", car.needs_service())
